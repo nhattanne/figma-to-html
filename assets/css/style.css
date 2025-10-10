@@ -437,8 +437,14 @@ color: #ffb900;
   padding: 96px 0px;
 
 }
+.feedback .feedback-list {
+  display: flex;
+  /* overflow: hidden; */
+  
+}
 .feedback .feedback-item {
   display: flex;
+  /* flex-shrink: 0; */
 }
 .feedback-item .avatar {
   width: 72px;
@@ -476,7 +482,7 @@ color: #ffb900;
 
 }
 
-.feedback-item .dot.active {
+.feedback-item .dot.active{
   background-color: var(--color);
 }
 
