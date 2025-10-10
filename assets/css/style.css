@@ -17,6 +17,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
+  /* overflow-x: hidden; */
 }
 /* ========================common======================= */
 a {
@@ -336,6 +337,7 @@ border: 1px solid var(--color);
   color: #fff;
   cursor: pointer ;
 }
+
 .popular .course-list {
   margin-top: 55px;
   display: flex;
@@ -350,12 +352,17 @@ border: 1px solid var(--color);
 
 }
 .popular .course-item {
-  /* background-color: blue; */
-  width: 100%;
-  display: block;
-  border-radius: 12px;
-  background-color: #fff;
-  border: 1px solid #E2DFDA;
+  .popular .course-item {
+    flex: 1;                        /* co giãn đều trong 1 hàng */
+    min-width: 0;                   /* ngăn tràn nội dung */
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid #E2DFDA;
+    height: 100%;
+  }
+  
 }
 
 .popular .course-item:hover {
@@ -417,5 +424,70 @@ color: #ffb900;
   color: #fff;
   background-color: #ffb900;
   cursor: pointer;
+
+}
+
+
+
+
+/* ============ feedback ================= */
+.feedback {
+  margin-top: 135px;
+  background-color: #fff;
+  padding: 96px 0px;
+
+}
+.feedback .feedback-item {
+  display: flex;
+}
+.feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feedback-item .info .member-name {
+  margin-top: 18px;
+  font-size: 2.4rem;
+  line-height: 1.41;
+  font-weight: 700;
+  font-family: var(--font-heading);
+
+}
+.feedback-item .info .desc {
+  font-family: var(--font-desc);
+  font-size: 1.4rem;
+  line-height: 1.86;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.feedback-item .info .dots {
+  display: flex;
+  margin-top: 28px;
+  gap: 6px;
+
+}
+
+.feedback-item .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #634700;
+
+}
+
+.feedback-item .dot.active {
+  background-color: var(--color);
+}
+
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+.feedback-item .content blockquote {
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.53;
 
 }
